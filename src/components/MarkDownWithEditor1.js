@@ -1,7 +1,6 @@
 import { EditFilled, FileAddFilled } from "@ant-design/icons";
 import React from "react";
 import Markdown1 from "./Markdown1";
-import Markdown from "./Markdown";
 import MardownEditor from "./MarkdownEditor";
 
 const MarkdownWithEditor1 = ({ markdown, setMarkdown }) => {

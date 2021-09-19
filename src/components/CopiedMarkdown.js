@@ -1,22 +1,9 @@
+import { CopyFilled, CopyOutlined } from "@ant-design/icons";
 import React from "react";
-import ReactMarkdown from "react-markdown";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 //import SyntaxHighlighter from "react-syntax-highlighter";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-
-import { CopyToClipboard } from "react-copy-to-clipboard";
-
-import {
-  dark,
-  light,
-  materialLight,
-  tomorrow,
-  materialDark,
-  synthwave84,
-} from "react-syntax-highlighter/dist/esm/styles/prism";
-import remarkGfm from "remark-gfm";
-import { CopyFilled, CopyOutlined } from "@ant-design/icons";
-import { md } from "../data/markdown";
-import MDEditor from "@uiw/react-md-editor";
+import { synthwave84 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const CopiedMarkdown = ({ children, match, ...props }) => {
   const [copied, setCopied] = React.useState(false);

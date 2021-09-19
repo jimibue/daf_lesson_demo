@@ -1,6 +1,6 @@
-import React from "react";
 import MDEditor from "@uiw/react-md-editor";
-function MardownEditor({ mkdStr, markdown, setMarkdown }) {
+import React from "react";
+function MardownEditor({ markdown, setMarkdown }) {
   const [value, setValue] = React.useState(markdown);
   return (
     <div className="container">

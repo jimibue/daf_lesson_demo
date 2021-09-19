@@ -1,17 +1,14 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
-import SyntaxHighlighter from "react-syntax-highlighter";
 //import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-
-import {
-  dark,
-  light,
-  materialLight,
-  tomorrow,
-  materialDark,
-  synthwave84,
-} from "react-syntax-highlighter/dist/esm/styles/prism";
-
+// import {
+//   dark,
+//   light,
+//   materialLight,
+//   tomorrow,
+//   materialDark,
+//   synthwave84,
+// } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { md } from "../data/markdown";
 import CopiedMarkdown from "./CopiedMarkdown";
 

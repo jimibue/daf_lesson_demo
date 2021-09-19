@@ -1,14 +1,7 @@
+import { Layout } from "antd";
 import React from "react";
-import { Layout, Menu } from "antd";
-import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-} from "@ant-design/icons";
 
-const { Header, Sider, Content } = Layout;
+const { Sider } = Layout;
 
 class Sidemenu extends React.Component {
   state = {

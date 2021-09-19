@@ -1,14 +1,13 @@
-import React, { useState } from "react";
 import { Card } from "antd";
-
-// import Question from "./components/Question";
-import { md, projectSetupMD } from "../data/markdown";
+import React from "react";
 import DummyCollapse from "../components/DummyCollapse";
-import { lifecycle_md } from "../data/lifecylce_md";
+// import { lifecycle_md } from "../data/lifecylce_md";
+// // import Question from "./components/Question";
+// import { projectSetupMD } from "../data/markdown";
 
 const Context = () => {
-  const [markdown, setMarkdown] = useState(projectSetupMD);
-  const [lifecycleMD, setLifecycleMD] = useState(lifecycle_md);
+  // const [markdown, setMarkdown] = useState(projectSetupMD);
+  // const [lifecycleMD, setLifecycleMD] = useState(lifecycle_md);
   return (
     <Card style={{ marginBottom: "40px" }}>
       <h1>hello</h1>

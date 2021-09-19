@@ -1,14 +1,13 @@
+import { Avatar, Card } from "antd";
+import Meta from "antd/lib/card/Meta";
 import React, { useState } from "react";
-import { Avatar, Card, Divider } from "antd";
-
-// import Question from "./components/Question";
-import { md, projectSetupMD } from "../data/markdown";
 import DummyCollapse from "../components/DummyCollapse";
 import MarkdownWithEditor from "../components/MarkdownWithEditor";
 import MarkdownWithEditor1 from "../components/MarkDownWithEditor1";
-import { lifecycle_md } from "../data/lifecylce_md";
 import { sort_first_md, sort_first_solition_md } from "../data/brainteasers";
-import Meta from "antd/lib/card/Meta";
+import { lifecycle_md } from "../data/lifecylce_md";
+// import Question from "./components/Question";
+import { projectSetupMD } from "../data/markdown";
 
 const Lifecycle = () => {
   const [markdown, setMarkdown] = useState(projectSetupMD);

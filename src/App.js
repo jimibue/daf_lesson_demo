@@ -1,15 +1,12 @@
 import { HomeFilled } from "@ant-design/icons";
-import { PageHeader } from "antd";
-import React, { useState } from "react";
+import React from "react";
 import { Route, Switch } from "react-router";
-import { Link, useHistory } from "react-router-dom";
-import Sidemenu from "./components/Sidemenu";
+import { Link } from "react-router-dom";
 import Context from "./pages/Context";
 import Home from "./pages/Home";
 import { routes } from "./pages/routes";
 
 const App = () => {
-  const history = useHistory();
   const renderRoutes = () => {
     return routes.map((r) => (
       <Route exact path={r.pathname} component={r.component} />
