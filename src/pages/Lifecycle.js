@@ -77,6 +77,7 @@ const Lifecycle = () => {
           <a
             href="https://codesandbox.io/s/clock-example-7xi17"
             target="_blank"
+            rel="noreferrer"
           >
             working example
           </a>
