@@ -5,13 +5,15 @@ import DummyCollapse from "../components/DummyCollapse";
 import MarkdownWithEditor from "../components/MarkdownWithEditor";
 import MarkdownWithEditor1 from "../components/MarkDownWithEditor1";
 import { sort_first_md, sort_first_solition_md } from "../data/brainteasers";
-import { lifecycle_md } from "../data/lifecylce_md";
+import { homework_md, hooks_md, lifecycle_md } from "../data/lifecylce_md";
 // import Question from "./components/Question";
 import { projectSetupMD } from "../data/markdown";
 
 const Lifecycle = () => {
   const [markdown, setMarkdown] = useState(projectSetupMD);
   const [sortFirstMD, setSortFirstMD] = useState(sort_first_md);
+  const [hooksMD, setHooksMD] = useState(hooks_md);
+  const [homeworkMD, setHomeworkMD] = useState(homework_md);
   const [sortFirstSolutionMD, setSortFirstSolutionMD] = useState(
     sort_first_solition_md
   );
@@ -23,7 +25,7 @@ const Lifecycle = () => {
           avatar={
             <Avatar src="https://konfinity-assets.s3.ap-south-1.amazonaws.com/blog/React+Lifecycle.png" />
           }
-          title={"Life Cycle Methods"}
+          title={"Life Cycle Methods and Hooks"}
           description={
             <span
               style={{
@@ -84,19 +86,34 @@ const Lifecycle = () => {
           <MarkdownWithEditor markdown={markdown} setMarkdown={setMarkdown} />
         </DummyCollapse>
 
+        <DummyCollapse header="Hook review">
+          <p>
+            Let's take a quick look at useState, and see how we can do lifecycle
+            methods with useEffect and introduce the useReducer hook.
+          </p>
+          <a
+            href="  https://codesandbox.io/s/use-reducer-count-os74c"
+            target="_blank"
+            rel="noreferrer"
+          >
+            working example
+          </a>
+          <MarkdownWithEditor markdown={hooksMD} setMarkdown={setHooksMD} />
+        </DummyCollapse>
+
         <DummyCollapse header="Homework">
           <MarkdownWithEditor1
-            markdown={lifecycleMD}
-            setMarkdown={setLifecycleMD}
+            markdown={homeworkMD}
+            setMarkdown={setHomeworkMD}
           />
         </DummyCollapse>
 
-        <DummyCollapse header="Resources">
+        {/* <DummyCollapse header="Resources">
           <MarkdownWithEditor1
             markdown={`## stuff here`}
             setMarkdown={setLifecycleMD}
           />
-        </DummyCollapse>
+        </DummyCollapse> */}
       </Card>
     </>
   );

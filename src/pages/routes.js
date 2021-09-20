@@ -3,7 +3,7 @@ import Lifecycle from "./Lifecycle";
 
 export const routes = [
   {
-    name: "Lifecylce Methods",
+    name: "Lifecylce Methods and Hooks",
     pathname: "/lifecyle_methods",
     component: Lifecycle,
   },

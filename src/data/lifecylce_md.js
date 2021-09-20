@@ -155,3 +155,162 @@ You should not call setState( ) in componentWillUnmount( ) because the component
 ![](https://i2.wp.com/programmingwithmosh.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-31-at-1.44.28-PM.png?ssl=1
  )
 `;
+
+export const hooks_md = `
+
+## useState
+The *****useState***** hook lets you add state to function components.
+
+It returns two values, state and a function to update the state. it takes one value which is the default value of the state.  Let's look at an example
+
+~~~js
+import React, { useEffect, useState } from "react";
+
+const Animation = () => {
+  const [xPos, setXPos] = useState(0);
+  return (
+    <>
+      <div style={styles.container}>
+        <h1 style={{ ...styles.dvd, left: xPos }}>DVD</h1>
+      </div>
+      {xPos}
+      <button onClick={() => setXPos(xPos + 10)}>move forward</button>
+      {/* Can also pass a function to useEffect where param is previous state  */}
+      <button onClick={() => setXPos((prevState) => prevState - 10)}>
+        move backwords
+      </button>
+    </>
+  );
+};
+
+const styles = {
+  container: {
+    border: "1px solid blue",
+    position: "relative",
+    height: "300px",
+    width: "300px"
+  },
+  dvd: {
+    position: "absolute"
+  }
+};
+export default Animation;
+~~~
+
+## useEffect
+The *****useEffect***** hook allows us to do life cycle methods lets looks at it
+
+~~~js
+import React, { useEffect, useState } from "react";
+
+const UseEffectDemo = () => {
+  const [data, setData] = useState(null);
+  const [count, setCount] = useState(0);
+  const [toggle, setToggle] = useState(true);
+
+  // called when any state changes
+  useEffect(() => {
+    console.log("first useEffect");
+  });
+
+  // only want to do this on mount
+  useEffect(() => {
+    console.log(" on mount");
+    setData("data set");
+  }, []);
+  // only run when count changes to do this on mount
+  useEffect(() => {
+    console.log("count changed");
+    if (count > 10) {
+      setCount(0);
+    }
+  }, [count]);
+  return (
+    <div>
+      <p>data: {data}</p>
+      <p>
+        count: {count} <button onClick={() => setCount(count + 1)}>add</button>
+      </p>
+
+      <p>
+        toggle:{toggle ? "true" :"false"} <button onClick={() => setToggle(!toggle)}>toggle</button>
+      </p>
+    </div>
+  );
+};
+export default UseEffectDemo;
+~~~
+
+## useReducer
+A “reducer” is a fancy word for a function that takes 2 or more values and returns 1 value.  We have seen this in the reduce function in arrays.  Let's see
+how this looks with the useReducer hook.  
+
+The useReducer is similar to the useState hook, it just gives us state and a way to set the state.  useReducer is preferred when our state or the actions we want to do on it get more complicated.  For now, we will keep this example simple.
+
+~~~js
+import React, { useReducer } from "react";
+
+const CounterReducer = () => {
+  // First render will create the state, and it will
+  // persist through future renders
+  const [sum, dispatch] = useReducer((state, action) => {
+    switch (action) {
+      case "add":
+        return state + 1;
+      case "minus":
+        return state - 1;
+      default:
+        return state;
+    }
+  }, 0);
+
+  return (
+    <>
+      {sum}
+      <br />
+      {/* we 'dispatch' an 'action' */}
+      <button onClick={() => dispatch("add")}>Add 1</button>
+      <button onClick={() => dispatch("minus")}>minus 1</button>
+    </>
+  );
+};
+
+export default CounterReducer;
+
+~~~
+
+`;
+
+export const homework_md = `
+# Homework
+choose one (rock paper scissors or animations)
+
+## Option 1: Rock Paper Scissors
+#### Basic Objectives:
+
+- A user selects rock, paper, or scissors
+- Computer randomly chooses
+- Display the user and computers choice on the screen
+- Display the winner
+- Keep track of wins, losses, & ties
+- Use images to make a choice
+
+#### Bonus Objectives:
+- Track the percentage of times the user has won/ lost/ tied
+- Make it so it works with two players
+- See if you can use componentDidUpdate( ) 
+- Color a win differently than a loss so it is easy to tell if the user won.
+ 
+
+ 
+
+## Option 2: React Lifecycle Methods and Animations
+
+#### Requirements
+
+- use inline styling and be able to pass style properties to be components(example the height and width of a container)
+- be creative and experiment
+- use set interval to create an animation/game
+- use componentDidMount and  (or equvalent with hooks)
+- create multiple components and decide where the state should live
+`;
