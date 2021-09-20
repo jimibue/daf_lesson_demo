@@ -62,21 +62,25 @@ const Lifecycle = () => {
           </DummyCollapse>
         </DummyCollapse>
         <DummyCollapse header="React Lifecycle Methods">
-          <MarkdownWithEditor1
+          <MarkdownWithEditor
             markdown={lifecycleMD}
             setMarkdown={setLifecycleMD}
           />
         </DummyCollapse>
-        <DummyCollapse header="DEMO: Example App">
-          <DummyCollapse header="What we are building">
-            <MarkdownWithEditor markdown={markdown} setMarkdown={setMarkdown} />
-          </DummyCollapse>
-          <DummyCollapse header="Setup">
-            <MarkdownWithEditor markdown={markdown} setMarkdown={setMarkdown} />
-          </DummyCollapse>
-          <DummyCollapse header="Part 2: ....">
-            <MarkdownWithEditor markdown={markdown} setMarkdown={setMarkdown} />
-          </DummyCollapse>
+        <DummyCollapse header="DEMO: Clock App">
+          <h2> What we are Building</h2>
+          <p>
+            We will be building a clock component using class components. here
+            is an working example of something along the line that we will be
+            building{" "}
+          </p>
+          <a
+            href="https://codesandbox.io/s/clock-example-7xi17"
+            target="_blank"
+          >
+            working example
+          </a>
+          <MarkdownWithEditor markdown={markdown} setMarkdown={setMarkdown} />
         </DummyCollapse>
 
         <DummyCollapse header="Homework">

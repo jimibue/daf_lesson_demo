@@ -151,8 +151,7 @@ componentWillUnmount( ) is invoked immediately before a component is unmounted a
 
 You should not call setState( ) in componentWillUnmount( ) because the component will never be re-rendered. Once a component instance is unmounted, it will never be mounted again.
 
- 
-
 #### Lifecycle Method Diagram 
-![](https://i2.wp.com/programmingwithmosh.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-31-at-1.44.28-PM.png?ssl=1)
+![](https://i2.wp.com/programmingwithmosh.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-31-at-1.44.28-PM.png?ssl=1
+ )
 `;

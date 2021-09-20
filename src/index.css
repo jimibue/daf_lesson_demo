@@ -19,3 +19,6 @@ code {
 .ant-collapse-content > .ant-collapse-content-box {
   padding: 0 16px !important;
 }
+img {
+  max-width: 700px;
+}

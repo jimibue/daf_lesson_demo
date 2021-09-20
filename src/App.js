@@ -18,7 +18,7 @@ const App = () => {
         <Link to="/" style={{ position: "fixed", top: "5px", left: "5px" }}>
           <HomeFilled />
         </Link>
-        <div style={{ maxWidth: "600px", margin: "auto" }}>
+        <div style={{ maxWidth: "800px", margin: "auto" }}>
           <Switch>
             <Route exact path="/" component={Home} />
             {renderRoutes()}
